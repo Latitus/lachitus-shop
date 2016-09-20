@@ -1,0 +1,13 @@
+.btn__search {
+  @extend .-bg-dark;
+  border-color: $goldColor;
+  .fa {
+    color: $goldColor;
+  }
+}
+
+.btn--primary {
+  @extend .-bg-gold;
+  border-color: $blackColor;
+  color: $blackColor;
+}

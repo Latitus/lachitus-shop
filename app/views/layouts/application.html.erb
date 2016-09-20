@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lachitus</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header class="header">
+
+    <div class="navbar lachitus-navbar lachitus-navbar__head spacer-none -bg-gold" role="navigation">
+      <ul class="nav nav-pills pull-right">
+        <li>
+          <form class="form-inline">
+            <div class="form-group pull-left">
+              <div class="input-group">
+                <input type="text" class="form-control -border-color-gold" id="exampleInputAmount" placeholder="Search">
+              </div>
+            </div>
+            <button type="submit" class="btn btn__search"><i class="fa fa-search"></i></button>
+          </form>
+        </li>
+        <!-- <li><a href="/"><i class="fa fa-shopping-cart fa-2x"></i> Cart (<span class="cart-count"></span>)</a></li> -->
+
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to cart_path do%>
+              <i class="fa fa-shopping-cart fa-2x"></i> Cart (<span class="cart-count"><%=current_user.cart_count%></span>)
+            <%end%>
+          </li>
+          <li><a href="/profiles/<%= current_user.profile.slug %>/edit"><i class="fa fa-user fa-2x"></i> Edit profile</a></li>
+           |
+          <li><a href="/users/sign_out" data-method="delete"><i class="fa fa-sign-out fa-2x"></i> Sign-Out</a></li>
+        <% else %>
+          <li><a href="/users/sign_in"><i class="fa fa-sign-in fa-2x"></i> Sign-In</a></li>
+        <% end %>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <% if notice %>
+      <div class="alert alert-success"><%= notice %></div>
+    <% end %>
+    <% if alert %>
+      <div class="alert alert-danger"><%= alert %></div>
+    <% end %>
+    <%= yield %>
+  </main>
+
+  <footer class="footer -bg-dark text-center">
+    <div class="container">
+      <ul class="nav navbar-nav footer__navbar-nav">
+        <li>
+          <a href="/term-condition" target="_blank" class="text-captilizer"> Term & condition</a>
+        </li>
+        <li>
+          <a href="/size-guide" target="_blank" class="text-captilizer"> Size guide</a>
+        </li>
+        <li>
+          <a href="/about" target="_blank" class="text-captilizer"> About us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="container">
+      <p><span class="glyphicon glyphicon-heart"></span> 	&#169; Copyright 2015 - Lochitus INC</p>
+    </div>
+  </footer>
+
+</body>
+</html>

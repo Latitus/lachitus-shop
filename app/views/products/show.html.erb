@@ -1,0 +1,48 @@
+<!-- <h1>Products#show</h1>
+<p>Find me in app/views/products/show.html.erb</p> -->
+
+
+<section>
+  <div class="container-fluid h-space-in-all-large">
+    <div class="row">
+      <div class="col-sm-12 col-md-offset-1 col-md-5 h-space-in-all-xsmall">
+        <%= image_tag @product.thumbnail_img.url(:medium), class: "product img-responsive center-block", alt: "Lachitus fashion" %>
+      </div>
+      <div class="col-sm-12 col-md-5">
+        <h3><%= @product.title %></h3>
+        <p><%= @product.description %></p>
+        <div class="row">
+          <div class="col-xs-12 col-sm-8">
+            <div class="btn-group" role="group" aria-label="...">
+              <button type="button" class="btn btn-default">S</button>
+              <button type="button" class="btn btn-default">M</button>
+              <button type="button" class="btn btn-default">L</button>
+              <button type="button" class="btn btn-default">XL</button>
+            </div>
+          </div>
+
+          <div class="col-xs-4">
+            <a href="/size-guide" target="_blank" class="btn btn-default btn-block">Size guide</a>
+            <%=link_to "", class: "btn btn--primary btn-block", data: {target: @cart_action, addUrl: add_to_cart_path(@product), removeUrl: remove_from_cart_path(@product)} do%>
+              <i class="fi-shopping-cart"></i>
+              <span><%=@cart_action%></span> Cart
+            <%end%>
+          </div>
+
+          <div class="col-xs-12 col-sm-4">
+            <h4>Can I HELP YOU?</h4>
+            <p>Telephone</p>
+            <p>0123456789</p>
+
+            <p>Email</p>
+            <!-- <a href="/send-mail" class="btn btn--primary btn-block" target="_blank">SEND</a> -->
+
+            <h4>Social Media</h4>
+            <p>Facebook</p>
+            <p>Instagram</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

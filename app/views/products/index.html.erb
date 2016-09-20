@@ -1,0 +1,22 @@
+<!-- <h1>Products#index</h1>
+<p>Find me in app/views/products/index.html.erb</p> -->
+
+<section>
+  <div class="container-fluid h-space-in-all-large">
+    <div class="row">
+      <% @products.each do |product| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="thumbnail thumbnail--primary">
+            <%= link_to "products/#{product.slug}" do %>
+              <%= image_tag product.thumbnail_img(:medium), class: "product img-responsive", alt: "Lachitus fashion" %>
+            <% end %>
+            <div class="caption">
+              <p><big><%= product.title %></big></p>
+              <p><%= product.price %>$</p>
+            </div>
+          </div>
+        </div> <!-- /.item -->
+      <% end %>
+    </div> <!-- /.row -->
+  </div>
+</sestion>

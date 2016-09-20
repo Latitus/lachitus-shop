@@ -1,0 +1,20 @@
+.section-contact,
+.section-charity {
+  @extend .josefin-slab;
+  h2 {
+    font-size: 500%;
+  }
+  .head-info {
+    font-size: 250%;
+  }
+
+  .detail {
+    font-weight: bold;
+    font-size: 270%;
+    text-transform: uppercase;
+  }
+}
+
+.section-charity img {
+  margin: 0 auto;
+}

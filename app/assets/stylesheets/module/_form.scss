@@ -1,0 +1,47 @@
+.register-form {
+  @extend .josefin-slab;
+}
+
+.register-link{
+  margin-top: 30px;
+}
+
+.form-box {
+  color: $whiteColor;
+}
+
+.form-box__input {
+  color: $blackColor;
+}
+
+.form-box__title {
+  @extend .josefin-slab;
+  color: $whiteColor;
+  font-size: 85px;
+  font-weight: 100;
+}
+
+.form-box__label {
+  font-size: 22px;
+}
+
+.form-box__input,
+.form-box__button {
+  border-color: $goldColor;
+}
+
+.form-box__button {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.form-control {
+  &.form-box__input {
+    background: rgba(25, 24, 22, 0.8);
+    color: $whiteColor;
+  }
+}
+
+.none-resize {
+  resize: none;
+}

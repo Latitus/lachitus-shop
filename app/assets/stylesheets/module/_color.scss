@@ -1,0 +1,21 @@
+.-bg-dark {
+  @include gradient-horizontal($start-color: #231B1B, $end-color: #000, $start-percent: 0.2%, $end-percent: 80%);
+}
+
+.-bg-gold {
+  @include gradient-horizontal($start-color: #C3813C, $end-color: #F5DE7C, $start-percent: 0.2%, $end-percent: 80%);
+}
+
+.-border-color-gold {
+  border: 1px solid $goldColor;
+}
+
+.-color-gold {
+  color: $goldColor;
+}
+
+.-bg-theme-fashion {
+  background-image: asset-url("lachitus-register.jpg");
+  background-repeat: no-repeat;
+  background-size: inherit;
+}

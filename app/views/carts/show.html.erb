@@ -1,0 +1,28 @@
+<!-- <h1>Carts#show</h1>
+<p>Find me in app/views/carts/show.html.erb</p> -->
+
+<section class="text-center">
+  <div class="container-fluid h-space-in-all-large">
+    <div class="row">
+      <div class='col-xs-6'>
+        <table class='table table-bordered'>
+          <thead>
+            <tr>
+              <th class='text-center'>Title</th>
+              <th class='text-center'>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @cart_products.each do |p| %>
+              <tr>
+                <td><%= p.title %></td>
+                <td><%= p.price %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div> <!-- /.row -->
+    <%= link_to "Checkout", '', class: "button" unless current_user.get_cart_product.blank? %>
+  </div>
+</sestion>

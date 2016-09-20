@@ -1,0 +1,32 @@
+<section>
+  <div class="container h-space-in-all-large">
+
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+        <h3>CUSTOMER SERVICE</h3>
+        <h3>ONLINE SALES CONTACT FORM</h3>
+
+        <div class="form-box headspacer-in-medium">
+          <%= form_for(:mailer, class: "form") do |f| %>
+            <div class="field form-group">
+              <%= f.label :email, class: 'form-box__label' %><br />
+              <%= f.email_field :email, autofocus: true, class: 'form-control', placeholder: 'email@lachitus.com' %>
+            </div>
+
+            <div class="field form-group">
+              <%= f.label :message, class: 'form-box__label' %><br />
+              <%= f.text_area :message, rows: "10",autocomplete: "off", class: 'none-resize form-control', placeholder: 'What I can help?' %>
+            </div>
+
+            <div class="actions">
+              <%= f.submit "Send Mail", class: 'btn btn-default btn--primary btn-block form-box__button' %>
+            </div>
+          <% end %>
+        </div>
+
+      </div> <!-- /.col -->
+    </div> <!-- /.row -->
+
+  </div>
+</section>

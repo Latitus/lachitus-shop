@@ -1,0 +1,68 @@
+.logo {
+  @include size(270px, 163px);
+  background-image: asset-url("lachitus-logo.png");
+  background-repeat: no-repeat;
+  display: block;
+  margin: 0 auto;
+}
+
+.lachitus-navbar {
+  min-height: auto;
+  a {
+    color: #000000;
+    font-weight: 500;
+  }
+  li a:hover {
+    @include transition(background 0.5s, background-color 0.5s, color 0.5s);
+    background-color: #000000;
+    color: $goldColor;
+  }
+  .form-inline {
+    padding: 11px 15px;
+  }
+}
+
+.lachitus-navbar__head {
+  .nav {
+    > li > a {
+      border-radius: 0;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+  }
+
+}
+
+@media (min-width: $screen-md-min) {
+  .lachitus-navbar {
+    .collapse {
+      padding: 0;
+    }
+  }
+  .nav__main {
+    li {
+      float: left;
+      width: 100/6 * 1%;
+      a {
+        border-radius: 0;
+        padding: 10px 0;
+      }
+    }
+    li + li {
+      margin-left: 0;
+    }
+  }
+}
+
+.navbar-header {
+  .navbar-toggle {
+    margin-top: -24px;
+  }
+  .icon-bar {
+    background-color: $goldColor;
+  }
+}
+
+.header-bg {
+  background-image: asset-url("lachitus-repeat.png");
+}

@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: lachitus_development
+
+test:
+  <<: *default
+  database: lachitus_test
+
+production:
+  <<: *default
+  database: lachitus_production
+  username: lachitus
+  password: <%= ENV['LACHITUS_DATABASE_PASSWORD'] %>

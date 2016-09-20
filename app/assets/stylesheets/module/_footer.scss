@@ -1,0 +1,21 @@
+.footer__primary {
+  .nav-pills {
+    a {
+      color: $goldColor;
+      &:hover {
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.footer__navbar-nav {
+  > li > a {
+    color: $goldColor;
+    &:hover {
+      background-color: transparent;
+      text-decoration: underline;
+    }
+  }
+}

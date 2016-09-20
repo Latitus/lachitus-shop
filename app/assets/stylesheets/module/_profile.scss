@@ -1,0 +1,59 @@
+.profile-container {
+  @include box-shadow(0 1px 19px rgba(27, 17, 17, 0.88));
+  background-color: #fff;
+}
+
+.profile-text {
+  font-size: 32px;
+  padding: 50px;
+}
+
+.profile {
+
+  .avatar {
+    @include square(300px);
+  }
+}
+
+.profile-list {
+  margin: 30px;
+  .detail {
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .info-detail {
+    color: $goldColor;
+  }
+}
+
+.profile-info {
+  padding-top: 50px;
+  margin-left: 30px;
+}
+
+.profile-social {
+  .social {
+    display: inline-block;
+    float: none;
+    margin: 5px 0;
+    vertical-align: bottom;
+    li {
+      margin: 5px 15px;
+      a {
+        border-radius: 50%;
+        color: #fff;
+        padding: 20px;
+        &:hover {
+          background-color: transparent;
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.profile-title,
+.profile-position,
+.profile-text {
+  @extend .font-playball;
+}

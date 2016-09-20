@@ -1,0 +1,38 @@
+<%= render partial: "pages/section_header_bar" %>
+<div class="-bg-theme-fashion">
+  <div class="container">
+    <div class="row spacer-medium headspacer-medium ">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-8 form-box register-form">
+        <h2 class="form-box__title text-center spacer-small">Sign in</h2>
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field form-group">
+            <%= f.label :email, class: 'form-box__label' %><br />
+            <%= f.email_field :email, autofocus: true, class: 'form-control form-box__input', placeholder: 'email@lachitus.com' %>
+          </div>
+
+          <div class="field form-group">
+            <%= f.label :password, class: 'form-box__label' %><br />
+            <%= f.password_field :password, autocomplete: "off", class: 'form-control form-box__input', placeholder: '******' %>
+          </div>
+
+          <% if devise_mapping.rememberable? -%>
+            <div class="field form-box__input">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end -%>
+
+          <div class="actions">
+            <%= f.submit "Log in", class: 'btn btn-default btn--primary btn-block form-box__button' %>
+          </div>
+        <% end %>
+
+        <div class="text-center register-link">
+          <%= render "devise/shared/links" %>
+        </div>
+
+      </div> <!-- /.col -->
+    </div> <!-- /.row -->
+  </div> <!-- /.container -->
+</div> <!-- /.theme-fashion -->

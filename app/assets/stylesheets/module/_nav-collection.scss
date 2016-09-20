@@ -1,0 +1,49 @@
+.nav-collection {
+  li {
+    border: 2px solid $goldColor;
+    position: relative;
+    width: 100%;
+  }
+  h3 {
+    font-weight: 300;
+  }
+  .portfolio-figure img {
+    margin: 0 auto;
+  }
+
+  .portfolio-caption {
+    @extend .josefin-slab;
+    height: 30%;
+  }
+}
+
+.portfolio-caption {
+  @include size(100%, 90px);
+  bottom: 0;
+  background-color: rgba(32, 39, 52, 0.8);
+  position: absolute;
+	padding: 10px;
+  opacity: 0;
+  h3 {
+    margin-top: 10px;
+  }
+}
+
+.portfolio-figure{
+  &:hover {
+    .portfolio-caption {
+      color: #fff;
+      opacity: 1;
+      @include transition(background 0.5s, background-color 0.5s, color 0.5s);
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .nav-collection {
+    li {
+      float: left;
+      width: 20%;
+    }
+  }
+}

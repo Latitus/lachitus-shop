@@ -1,0 +1,73 @@
+
+@mixin text-align($screen) {
+  .h-text-#{$screen}-left { text-align: left; }
+  .h-text-#{$screen}-right { text-align: right; }
+  .h-text-#{$screen}-center { text-align: center; }
+  .h-text-#{$screen}-justify { text-align: justify; }
+}
+
+@media (min-width: $screen-sm-min) {
+  @include text-align(sm);
+}
+
+@media (min-width: $screen-md-min) {
+  @include text-align(md);
+}
+
+@media (min-width: $screen-lg-min) {
+  @include text-align(lg);
+}
+
+
+
+//utility class
+//columns
+// Margin
+
+.expand-space {margin:0;}
+.spacer-none {margin-bottom:0;}
+.spacer-xxxsmall { margin-bottom: 5px; }
+.spacer-xxsmall { margin-bottom: 8px; }
+.spacer-xsmall { margin-bottom: 16px; }
+.spacer-small { margin-bottom: 32px; }
+.spacer-medium { margin-bottom: 52px; }
+.spacer-large { margin-bottom: 60px; }
+.spacer-xlarge { margin-bottom: 160px; }
+
+.headspacer-none {margin-top:0;}
+.headspacer-xxxsmall { margin-top: 5px; }
+.headspacer-xxsmall { margin-top: 8px; }
+.headspacer-xsmall { margin-top: 16px; }
+.headspacer-small { margin-top: 32px; }
+.headspacer-medium { margin-top: 48px; }
+.headspacer-large { margin-top: 60px; }
+.headspacer-xlarge { margin-top: 160px; }
+
+// Padding
+.space-in-none {padding-bottom:0;}
+.space-in-xxsmall { padding-bottom: 8px; }
+.space-in-xsmall { padding-bottom: 18px; }
+.space-in-small { padding-bottom: 32px; }
+.space-in-medium { padding-bottom: 48px; }
+.space-in-large { padding-bottom: 60px; }
+.space-in-xlarge { padding-bottom: 160px; }
+.tips-nav {padding-bottom: 400px; }
+.space-sticky { padding-bottom: 80px; }
+
+
+.headspacer-in-none {padding-top:0;}
+.headspacer-in-xxsmall { padding-top: 6px; }
+.headspacer-in-xsmall { padding-top: 18px; }
+.headspacer-in-small { padding-top: 32px; }
+.headspacer-in-medium { padding-top: 48px; }
+.headspacer-in-large { padding-top: 60px; }
+.headspacer-in-xlarge { padding-top: 160px; }
+
+.h-padding-none { padding: 0 }
+.h-margin-none { margin: 0 }
+.h-space-in-all-xxsmall { padding: 8px; }
+.h-space-in-all-xsmall { padding: 18px; }
+.h-space-in-all-small { padding: 32px; }
+.h-space-in-all-medium { padding: 48px; }
+.h-space-in-all-large { padding: 60px; }
+.h-space-in-all-xlarge { padding: 160px; }
